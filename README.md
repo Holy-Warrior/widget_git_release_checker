@@ -30,8 +30,9 @@ Add dependency in your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  http: ^1.0.0
-  url_launcher: ^6.0.0
+  widget_git_release_checker:
+    git:
+      url: https://github.com/Holy-Warrior/widget_git_release_checker.git
 ```
 
 Then run:
@@ -43,15 +44,24 @@ flutter pub get
 ---
 
 ## 🚀 Usage
-
 ```dart
-WidgetGitReleaseChecker(
-  user: "flutter",
-  repo: "flutter",
-  currentRelease: "v1.0.0",
-  filterOutPreRelease: true,
-  showLoading: true,
-)
+import 'package:widget_git_release_checker/widget_git_release_checker.dart';
+```
+```dart
+Column(
+  children: [
+
+
+    WidgetGitReleaseChecker(
+      user: "flutter",
+      repo: "flutter",
+      currentRelease: "v1.0.0",
+      filterOutPreRelease: true,
+      showLoading: true,
+    ),
+
+  ],
+);
 ```
 
 ---
